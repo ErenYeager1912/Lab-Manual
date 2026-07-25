@@ -28,3 +28,37 @@ public class CountCharacters {
      sc.close();
     }
 }
+        System.out.println("\nBreakdown for \"" + input + "\":");
+        System.out.print("- Vowels: ");
+        for (char ch : input.toCharArray()) {
+            if ("aeiouAEIOU".indexOf(ch) != -1) {
+                System.out.print(ch + " ");
+            }
+        }
+        System.out.println("→ " + vowels);
+
+        System.out.print("- Consonants: ");
+        for (char ch : input.toCharArray()) {
+            if (Character.isLetter(ch) && "aeiouAEIOU".indexOf(ch) == -1) {
+                System.out.print(ch + " ");
+            }
+        }
+        System.out.println("→ " + consonants);
+
+        System.out.print("- Digits: ");
+        for (char ch : input.toCharArray()) {
+            if (Character.isDigit(ch)) {
+                System.out.print(ch + " ");
+            }
+        }
+        System.out.println("→ " + digits);
+
+        System.out.print("- Special Characters: ");
+        for (char ch : input.toCharArray()) {
+            if (!Character.isLetterOrDigit(ch)) {
+                System.out.print(ch + " ");
+            }
+        }
+        System.out.println("→ " + specialChars);
+        scanner.close();
+    }
