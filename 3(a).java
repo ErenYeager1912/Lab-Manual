@@ -30,7 +30,7 @@ class Triangle implements Shape {
         return 0.5 * base * height;
     }
 }
-public class ShapeAreaCalculator {
+public class Main {
     public static void main(String[] args) {
         Circle c = new Circle(5);
         Rectangle r = new Rectangle(4, 6);
